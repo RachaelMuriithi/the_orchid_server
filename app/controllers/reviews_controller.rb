@@ -27,11 +27,11 @@ def destroy
   end
   
 def review_params
-    params.permit (
+    params.permit(
         :star_rating,
         :comment,
         :user_id,
-        :flowers,
+        :flower_id
     )
 end
 
