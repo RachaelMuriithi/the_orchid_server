@@ -17,7 +17,7 @@ end
 
 def destroy
     @review = find_review
-    @review.destroy 
+    @review.delete
     head :no_content
   end
   private
