@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount ForestLiana::Engine => '/forest'
   resources :flowers, only: [:index, :show]
   resources :reviews, only: [:index, :create, :update, :destroy]
   post "/signup", to: "users#create"

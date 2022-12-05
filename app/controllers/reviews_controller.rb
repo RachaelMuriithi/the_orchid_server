@@ -1,12 +1,22 @@
 class ReviewsController < ApplicationController
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    skip_before_action :authorize, only: [:index]
+    wrap_parameters format: []
 
 def index
-    render json: Review.all 
-end
+      if params[:flower_id]
+      flower = Flower.find(params[:flower_id])
+      reviews = flower.reviews
+    else
+      reviews = Review.all
+    end
+    render json: reviews
+  end
 
 def create
-    review = Review.create! (review_params)
-    render json: review, status: :created
+    review = @current_user.reviews.create!(review_params)
+    render json: review, serializer: ReviewSerializer, status: :created
 end
 
 def update
@@ -22,17 +32,20 @@ def destroy
   end
   private
 
-  def find_review
-    Review.find_by(id: params[:id])
+  def review_params
+    params.permit(:title, :comment, :flower_id)
   end
-  
-def review_params
-    params.permit(
-        :star_rating,
-        :comment,
-        :user_id,
-        :flower_id
-    )
-end
+
+  def render_unprocessable_entity_response(invalid)
+    render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+  end
+
+  def render_not_found_response
+    render json: { errors: ["Review not found"] }, status: :not_found
+  end
+
+  def find_review
+    Review.find(params[:id])
+  end
 
 end
