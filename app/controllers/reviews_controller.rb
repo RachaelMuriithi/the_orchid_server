@@ -5,19 +5,18 @@ class ReviewsController < ApplicationController
     wrap_parameters format: []
 
 def index
-  # if params[:restaurant_id]
-  #   restaurant = Restaurant.find(params[:restaurant_id])
-  #   reviews = restaurant.reviews
-  # else
-  #   reviews = Review.all
-  # end
+  if params[:flower_id]
+    flower = Flower.find(params[:flower_id])
+    reviews = flower.reviews
+  else
+    reviews = Review.all
+  end
   render json: Review.all
 end
 
 def create
     review = @current_user.reviews.create!(review_params)
-    render json: review, status: :created
-    # serializer: ReviewSerializer,
+    render json: review, serializer: ReviewSerializer, status: :created   
 end
 
 def update
