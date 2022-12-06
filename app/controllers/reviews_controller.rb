@@ -5,18 +5,19 @@ class ReviewsController < ApplicationController
     wrap_parameters format: []
 
 def index
-      if params[:flower_id]
-      flower = Flower.find(params[:flower_id])
-      reviews = flower.reviews
-    else
-      reviews = Review.all
-    end
-    render json: reviews
-  end
+  # if params[:restaurant_id]
+  #   restaurant = Restaurant.find(params[:restaurant_id])
+  #   reviews = restaurant.reviews
+  # else
+  #   reviews = Review.all
+  # end
+  render json: Review.all
+end
 
 def create
     review = @current_user.reviews.create!(review_params)
-    render json: review, serializer: ReviewSerializer, status: :created
+    render json: review, status: :created
+    # serializer: ReviewSerializer,
 end
 
 def update
@@ -33,7 +34,7 @@ def destroy
   private
 
   def review_params
-    params.permit(:title, :comment, :flower_id)
+    params.permit(:star_rating, :comment, :flower_id)
   end
 
   def render_unprocessable_entity_response(invalid)
