@@ -8,7 +8,7 @@ end
 
 def show  
 flower = Flower.find(params[:id])
-render json: flower, status: :ok
+render json: flower, serializer: FlowerSerializer, status: :ok
 end
 
 

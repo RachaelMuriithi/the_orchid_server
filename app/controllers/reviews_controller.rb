@@ -11,7 +11,7 @@ def index
   else
     reviews = Review.all
   end
-  render json: Review.all
+  render json: reviews
 end
 
 def create
@@ -30,6 +30,7 @@ def destroy
     review.destroy
     head :no_content
   end
+  
   private
 
   def review_params
