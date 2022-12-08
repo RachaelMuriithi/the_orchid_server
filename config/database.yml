@@ -41,7 +41,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -74,7 +74,7 @@ test:
 # URL environment variable explicitly:
 #
   production:
-    url: <%= ENV["postgresql://postgres:Ct6a7S7BzhySxb4PnE2F@containers-us-west-153.railway.app:7833/railway>
+    url: <%= ENV["DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
