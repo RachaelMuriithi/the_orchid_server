@@ -1,5 +1,5 @@
 # Flower.destroy_all
-Review.destroy_all
+# Review.destroy_all
 # User.destroy_all
 
 # flowers = [
@@ -165,80 +165,80 @@ reviews = [
     {
         star_rating: "4",
         comment: "The Orchid, a beautiful museum that educates visitors on the origin and importance of different flowers species.",
-        user_id: "39",
-        flower_id:"49"
+        user_id: "3",
+        flower_id:"1"
     },
     {
         star_rating: "3",
         comment: "The Orchid is a museum that educates and inspires guests to understand the beauty and importance of different flowers species. At this innovative museum, there is a full-size living orchid in their main show room, where you can learn about its origin, importance and benefits.",
-        user_id: "40",
-        flower_id:"50"
+        user_id: "4",
+        flower_id:"2"
     },
     {
         star_rating: "4",
         comment: "The museum also offers exhibit tours inside their gorgeous facility, which includes several interactive displays that explain all aspects of flowers cultivation and use to everyone of all ages.",
-        user_id: "41",
-        flower_id:"51"
+        user_id: "5",
+        flower_id:"10"
     },
     {
         star_rating: "4",
         comment: "The Orchid is a beautiful museum dedicated to the beauty and importance of flowers. You'll learn how flowers are grown, what the different flower species mean for people, when and where they were discovered, why they're important, and how you can grow your own. You'll walk away with some amazing orchids for your kitchen windowsill and room decor!",
-        user_id: "42",
-        flower_id:"52"
+        user_id: "6",
+        flower_id:"3"
     },
     {
         star_rating: "5",
         comment: "It's a very unique museum where you can learn more about the origin and importance of different flower species. Some of the things that are interesting to learn such as how they are born, some history behind them and the benefits they have for humans.",
-        user_id: "43",
-        flower_id:"53"
+        user_id: "7",
+        flower_id:"4"
     },
     {
         star_rating: "5",
         comment: "A tour through the world of flowers will appeal to both the novice and the connoisseur. The Orchid, a new museum dedicated to flowers and how they affect us all, is designed to be informative, fun and educational.",
-        user_id: "44",
-        flower_id:"54"
+        user_id: "8",
+        flower_id:"5"
     },
     {
         star_rating: "5",
         comment: "The Orchid is a park of sorts that educates visitors about flowers. It is a formal, but personal experience, with self-guided tours and interactive experiences. I recommend it to anyone who would like a better understanding of the importance and benefits of different flowers species.",
-        user_id: "45",
-        flower_id:"55"
+        user_id: "9",
+        flower_id:"6"
     },
     {
         star_rating: "4",
         comment: "The Orchid offers a glimpse into the beauty and uniqueness of these plants, from the delicate blossoms to the dedicated maintenance required. After all, a beautiful flower is not simply an organic piece of art – it adds dimension to humanity’s understanding of its natural surroundings.",
-        user_id: "46",
-        flower_id:"56"
+        user_id: "10",
+        flower_id:"7"
     },
     {
         star_rating: "3",
         comment: "After all, a beautiful flower is not simply an organic piece of art – it adds dimension to humanity’s understanding of its natural surroundings.",
-        user_id: "47",
-        flower_id:"57"
+        user_id: "11",
+        flower_id:"8"
     },
     {
         star_rating: "4",
         comment: "I recommend it to anyone who would like a better understanding of the importance and benefits of different flowers species.",
-        user_id: "43",
-        flower_id:"58"
+        user_id: "12",
+        flower_id:"9"
     },
     {
         star_rating: "4",
         comment: "The Orchid offers a glimpse into the beauty and uniqueness of these plants, from the delicate blossoms to the dedicated maintenance required. After all, a beautiful flower is not simply an organic piece of art – it adds dimension to humanity’s understanding of its natural surroundings.",
-        user_id: "42",
-        flower_id:"59"
+        user_id: "3",
+        flower_id:"10"
     },
     {
         star_rating: "5",
         comment: "The Orchid was a great flower to pick. It had a lot of color and gave off a nice scent. The flowers would look good in any room, you could use it as decoration or to just enjoy the beauty of it on its own.",
-        user_id: "44",
-        flower_id:"59"
+        user_id: "4",
+        flower_id:"1"
     },
     {
         star_rating: "5",
         comment: "The Orchid is filled with the fresh, natural scents of roses and lilies. It is the essence of romance and desire. The fragrance captures a celebration, a party, and all the ways love can be found.",
-        user_id: "48",
-        flower_id:"60"
+        user_id: "5",
+        flower_id:"2"
     },
 ]
 
